@@ -217,6 +217,79 @@ li:hover {
 }
 
 
+/* Main Content */
+
+.main-cont {
+  margin: 6.6rem 15.4rem;
+}
+
+.caption {
+  margin-bottom: 6.3rem;
+}
+
+.caption h1 {
+  color: var(--color-headings);
+  font-family: "Space Grotesk", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 4.6rem;
+  margin-bottom: 0;
+}
+
+.caption p {
+  font-family: "Schibsted Grotesk", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  line-height: 1.5;
+  font-size: 1.6rem;
+  width: 59.8rem;
+  font-style: normal;
+}
+
+.tools {
+  display: grid;
+  gap: 4.4rem;
+  grid-template-columns: 1fr 1fr;
+}
+
+.tool {
+  padding: 2.7rem;
+  border-radius: 10px;
+  border: 0.5px solid var(--color-border);
+}
+
+.tool:hover {
+  background-color: var(--color-hover);
+}
+
+.tool h2 {
+  font-family: "Space Grotesk", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-size: 2.4rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: var(--color-headings);
+}
+
+.tool p {
+  font-family: "Schibsted Grotesk", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-size: 1.6rem;
+  font-weight: 400;
+  width: 35.2rem;
+  line-height: 1.5;
+  color: var(--color-bodytext);
+  margin: 0;
+}
+
+.tool-icon {
+  font-size: 3rem;
+}
+
+
 /* Footer */
 
 .footer-cont {
