@@ -1,11 +1,13 @@
 # Web Utility Hub - Pull Request
 
-## 👥 Team Member
-- [ ] Peter Olugbenga (Project Lead)
-- [ ] Eric Chidera Godswill (Frontend Developer)
-- [ ] Sarah Nnanyelugo (UI/UX Developer)
+**Note: to check the boxes, type x between the square brackets, like so [x].**
 
-**Branch:** `feature/___________`
+## 👥 Team Member
+- [ ] Peter Olugbenga
+- [ ] Eric Chidera Godswill
+- [ ] Sarah Nnanyelugo
+
+**Branch:** `feat/___________`
 
 ---
 
@@ -29,7 +31,7 @@
 <!-- Brief description of changes -->
 
 
-### Technical Details (any)?
+### Technical Details (if any)?
 <!-- More detailed explanation -->
 
 
