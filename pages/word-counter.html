@@ -16,42 +16,116 @@
   <body>
     <header>
       <div class="header-cont">
-        <div class="left">
-          <div class="logo-cont">
-            <a href="/index.html"
-              ><img
-                src="/images/icons/logo-light.svg"
-                alt="logo-light"
-                class="logo logo-light"
-            /></a>
-            <a href="/index.html"
-              ><img
-                src="/images/icons/logo-dark.svg"
-                alt="logo-light"
-                class="logo logo-dark"
-            /></a>
+        <div class="web-nav">
+          <div class="left">
+            <div class="logo-cont">
+              <a href="/index.html"
+                ><img
+                  src="/images/icons/logo-light.svg"
+                  alt="logo-light"
+                  class="logo logo-light"
+              /></a>
+              <a href="/index.html"
+                ><img
+                  src="/images/icons/logo-dark.svg"
+                  alt="logo-light"
+                  class="logo logo-dark"
+              /></a>
+            </div>
+            <nav class="nav-links">
+              <ul>
+                <li><a href="/pages/bmi-calculator.html">BMI Calculator</a></li>
+                <li><a href="/pages/word-counter.html" class="active-link">Word Counter</a></li>
+                <li><a href="/pages/unit-converter.html">Unit Converter</a></li>
+                <li>
+                  <a href="/pages/password-gen.html">Password Generator</a>
+                </li>
+              </ul>
+            </nav>
           </div>
-          <nav>
-            <ul>
-              <a href="/pages/bmi-calculator.html"><li>BMI Calculator</li></a>
-              <a href="/pages/word-counter.html" class="active-link"
-                ><li>Word Counter</li></a
-              >
-              <a href="/pages/unit-converter.html"><li>Unit Converter</li></a>
-              <a href="/pages/password-gen.html"><li>Password Generator</li></a>
-            </ul>
-          </nav>
+
+          <div class="right right-gap">
+            <div class="about-btn"><a href="/pages/about.html">About</a></div>
+            <div
+              id="theme-toggle"
+              class="theme-toggle"
+              aria-label="Toggle theme"
+            >
+              <img src="/images/icons/sun.svg" class="sun-icon" alt="sun-icon" />
+              <img
+                src="/images/icons/moon.svg"
+                class="moon-icon"
+                alt="moon-icon"
+              />
+            </div>
+          </div>
         </div>
-        <div class="right right-gap">
-          <a href="/pages/about.html"><li>About</li></a>
-          <div id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
-            <img src="/images/icons/sun.svg" class="sun-icon" alt="sun-icon" />
-            <img
-              src="/images/icons/moon.svg"
-              class="moon-icon"
-              alt="moon-icon"
-            />
+
+        <div class="mobile-nav">
+          <div class="left">
+            <div class="logo-cont">
+              <a href="/index.html"
+                ><img
+                  src="/images/icons/logo-light.svg"
+                  alt="logo-light"
+                  class="logo logo-light"
+              /></a>
+              <a href="/index.html"
+                ><img
+                  src="/images/icons/logo-dark.svg"
+                  alt="logo-light"
+                  class="logo logo-dark"
+              /></a>
+            </div>
+            <nav class="nav-links">
+              <ul>
+                <li><a href="/pages/bmi-calculator.html">BMI Calculator</a></li>
+                <li><a href="/pages/word-counter.html">Word Counter</a></li>
+                <li><a href="/pages/unit-converter.html">Unit Converter</a></li>
+                <li>
+                  <a href="/pages/password-gen.html">Password Generator</a>
+                </li>
+              </ul>
+            </nav>
           </div>
+          <div class="mobile-right" id="mobileRight">
+            <img
+              src="/images/icons/menu-light.svg"
+              class="menu-btn menu-light"
+              alt="menu-icon"
+            />
+            <img
+              src="/images/icons/menu-dark.svg"
+              class="menu-btn menu-dark"
+              alt="menu-icon"
+            /><ul id="navLinks">
+            <li><a href="/pages/bmi-calculator.html">BMI Calculator</a></li>
+            <li><a href="/pages/word-counter.html">Word Counter</a></li>
+            <li><a href="/pages/unit-converter.html">Unit Converter</a></li>
+            <li><a href="/pages/password-gen.html">Password Generator</a></li>
+            <li><a href="/pages/about.html">About</a></li>
+            <li class="mobile-theme">
+              <p>Theme</p>
+              <span
+                id="theme-toggle"
+                class="theme-toggle"
+                aria-label="Toggle theme"
+              >
+                  <img
+                    src="/images/icons/sun.svg"
+                    class="sun-icon"
+                    alt="sun-icon"
+                  />
+                  <img
+                    src="/images/icons/moon.svg"
+                    class="moon-icon"
+                    alt="moon-icon"
+                  />
+              </span>
+            </li>
+          </ul>
+          </div>
+          
         </div>
       </div>
     </header>
@@ -67,6 +141,7 @@
       </div>
     </footer>
     <script src="/js/main.js"></script>
+    <script src="/js/theme.js"></script>
     <script src="/js/word-converter.js"></script>
   </body>
 </html>
