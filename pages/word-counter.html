@@ -3,29 +3,30 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Web Utility Hub</title>
+    <title>Word Counter</title>
     <link
       rel="shortcut icon"
-      href="images/icons/favicon.png"
+      href="/images/icons/favicon.png"
       type="image/png"
     />
-    <link rel="stylesheet" href="css/normalize.css" />
-    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="/css/normalize.css" />
+    <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="stylesheet" href="/css/word-counter.css" />
   </head>
   <body>
     <header>
       <div class="header-cont">
         <div class="left">
           <div class="logo-cont">
-            <a href="index.html"
+            <a href="/index.html"
               ><img
-                src="images/icons/logo-light.svg"
+                src="/images/icons/logo-light.svg"
                 alt="logo-light"
                 class="logo logo-light"
             /></a>
-            <a href="index.html"
+            <a href="/index.html"
               ><img
-                src="images/icons/logo-dark.svg"
+                src="/images/icons/logo-dark.svg"
                 alt="logo-light"
                 class="logo logo-dark"
             /></a>
@@ -33,18 +34,20 @@
           <nav>
             <ul>
               <a href="/pages/bmi-calculator.html"><li>BMI Calculator</li></a>
-              <a href="/pages/word-counter.html"><li>Word Counter</li></a>
+              <a href="/pages/word-counter.html" class="active-link"
+                ><li>Word Counter</li></a
+              >
               <a href="/pages/unit-converter.html"><li>Unit Converter</li></a>
               <a href="/pages/password-gen.html"><li>Password Generator</li></a>
             </ul>
           </nav>
         </div>
         <div class="right right-gap">
-          <a href="pages/about.html"><li>About</li></a>
+          <a href="/pages/about.html"><li>About</li></a>
           <div id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
-            <img src="images/icons/sun.svg" class="sun-icon" alt="sun-icon" />
+            <img src="/images/icons/sun.svg" class="sun-icon" alt="sun-icon" />
             <img
-              src="images/icons/moon.svg"
+              src="/images/icons/moon.svg"
               class="moon-icon"
               alt="moon-icon"
             />
@@ -54,8 +57,7 @@
     </header>
 
     <main>
-      <div class="main-cont">
-      </div>
+      <div class="main-cont"></div>
     </main>
 
     <footer>
@@ -64,6 +66,7 @@
         <p>© 2025 All rights reserved</p>
       </div>
     </footer>
-    <script src="js/main.js"></script>
+    <script src="/js/main.js"></script>
+    <script src="/js/word-converter.js"></script>
   </body>
 </html>

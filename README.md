@@ -145,7 +145,7 @@ Strength: Very Strong
 ```
 web-utility-hub/
 │
-├── index.html              # Main HTML file with all tools
+├── index.html              # Main HTML file
 ├── css/
 │   ├── styles.css          # Main stylesheet
 │   ├── bmi-calculator.css  # BMI calculator specific styles
@@ -158,9 +158,15 @@ web-utility-hub/
 │   ├── bmi-calculator.js   # BMI calculation module
 │   ├── word-counter.js     # Word counting module
 │   ├── unit-converter.js   # Unit conversion module
-│   ├── password-gen.js     # Password generation module
-│   └── utils.js            # Shared utility functions
+│   └── password-gen.js     # Password generation module
 │
+├── pages/
+│   ├── about.html            # About page HTML structure
+│   ├── bmi-calculator.html   # BMI calculation HTML structure
+│   ├── word-counter.html     # Word counting HTML structure
+│   ├── unit-converter.html   # Unit conversion HTML structure
+│   └── password-gen.html     # Password generation HTML structure
+|
 ├── images/
 │   └── icons/              # Tool icons and assets
 │
