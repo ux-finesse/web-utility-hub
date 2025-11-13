@@ -1,0 +1,92 @@
+/* Main Content */
+
+.main-cont {
+  padding: 6.6rem 2rem;
+}
+
+.tools a {
+  text-decoration: none;
+}
+
+.caption {
+  margin-bottom: 6.3rem;
+}
+
+.caption h1 {
+  font-size: 3.6rem;
+  margin-bottom: 1.2rem;
+}
+
+.caption p {
+  font-weight: 400;
+  line-height: 1.5;
+  font-size: 1.4rem;
+}
+
+.tools {
+    display: grid;
+    gap: 2.4rem;
+    grid-template-columns: 1fr;
+  }
+
+  .tool {
+    padding: 2.7rem;
+    border-radius: 10px;
+    border: 0.5px solid var(--color-border);
+  }
+
+  .tool:hover {
+    background-color: var(--color-hover);
+  }
+
+  .tool h2 {
+    font-size: 2.4rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: var(--color-headings);
+  }
+
+  .tool p {
+    font-size: 1.4rem;
+    font-weight: 400;
+    width: 35.2rem;
+    line-height: 1.5;
+    color: var(--color-bodytext);
+    margin: 0;
+  }
+
+  .tool-icon {
+    font-size: 3rem;
+  }
+
+@media (min-width: 1024px) {
+  .main-cont {
+    padding: 10.6rem 15.4rem;
+  }
+
+  .caption {
+    margin-bottom: 6.3rem;
+  }
+
+  .caption h1 {
+    color: var(--color-headings);
+    font-weight: 700;
+    font-size: 4.6rem;
+  }
+
+  .caption p {
+    font-size: 1.6rem;
+    width: 59.8rem;
+  }
+
+  .tools {
+    gap: 4.4rem;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .tool p {
+    font-size: 1.6rem;
+  }
+
+  
+}
