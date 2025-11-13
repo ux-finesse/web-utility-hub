@@ -41,7 +41,12 @@ h2 {
 }
 
 .header-cont {
+  position: fixed;
+  left: 0;
+  right: 0;
+  background-color: var(--color-bg);
   border-bottom: 0.5px solid var(--color-border);
+
 }
 
 .web-nav {
@@ -353,7 +358,7 @@ li > .theme-toggle {
     display: block;
     color: var(--color-bodytext);
     text-decoration: none;
-    padding: 1rem 1.8rem;
+    padding: 1rem 1.4rem;
   }
 
   .active-link {
