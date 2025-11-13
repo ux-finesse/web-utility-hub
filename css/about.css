@@ -18,9 +18,9 @@
 }
 
 .caption h1 {
-  color: var(--color-headings);
   font-size: 3.6rem;
   margin-bottom: 1.2rem;
+  color: var(--color-headings);
 }
 
 .caption p {
@@ -33,9 +33,9 @@
 .features h2,
 .team h2,
 .built-wt h2 {
-  color: var(--color-headings);
   font-size: 1.8rem;
   margin-bottom: 2rem;
+  color: var(--color-headings);
 }
 
 .features ul,
@@ -54,10 +54,9 @@
   position: relative;
   font-size: 1.4rem;
   line-height: 1.5;
-  color: var(--color-bodytext);
   list-style: none;
   padding-left: 23px;
-  z-index: -1;
+  color: var(--color-bodytext);
 }
 
 .features ul li::before,
@@ -68,20 +67,31 @@
   right: 0;
 }
 
+.team ul li a {
+  text-decoration: none;
+  color: var(--color-bodytext);
+}
+
+.team ul li a:hover {
+  text-decoration: underline;
+}
+
 .langs {
   display: flex;
   gap: 1.5rem;
+  flex-wrap: wrap;
 }
 
 .github {
   position: relative;
+  z-index: -1;
 }
 
-.github-logo{
+.github-logo {
   position: absolute;
   top: 0;
   left: 0;
-   transition: opacity var(--transition-speed) ease,
+  transition: opacity var(--transition-speed) ease,
     transform var(--transition-speed) ease;
 }
 
@@ -104,18 +114,13 @@
 
 @media (min-width: 768px) {
   .abt-dtl {
-  grid-template-columns: 1fr;
-}
+    grid-template-columns: 1fr;
+  }
 }
 
 @media (min-width: 1024px) {
   .main-cont {
     padding: 10.6rem 8.4rem;
-  }
-
-  .main-cont a {
-    text-decoration: none;
-    color: var(--color-bodytext);
   }
 
   .breadcrumb {
@@ -125,8 +130,41 @@
   }
 
   .breadcrumb a {
+    text-decoration: none;
     font-weight: 400;
     color: var(--color-bodytext);
+  }
+
+  .arrows {
+    position: relative;
+    z-index: -1;
+    width: 8px;
+    height: 8px;
+  }
+
+  .arrow-right {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: opacity var(--transition-speed) ease,
+      transform var(--transition-speed) ease;
+  }
+
+  [data-theme="light"] .arrow-right-light {
+    opacity: 1;
+  }
+
+  [data-theme="light"] .arrow-right-dark {
+    opacity: 0;
+  }
+
+  /* Dark mode: hide dark github-logo, show light github-logo */
+  [data-theme="dark"] .arrow-right-light {
+    opacity: 0;
+  }
+
+  [data-theme="dark"] .arrow-right-dark {
+    opacity: 1;
   }
 
   .abt-dtl {
@@ -171,11 +209,11 @@
   .langs {
     display: flex;
     gap: 1.5rem;
-    flex-wrap: wrap;
   }
 }
 
 @media (min-width: 1440px) {
   .main-cont {
     padding: 10.6rem 15.4rem;
-  }}
+  }
+}
