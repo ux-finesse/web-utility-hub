@@ -49,7 +49,6 @@
 .tool p {
   font-size: 1.4rem;
   font-weight: 400;
-  width: 35.2rem;
   line-height: 1.5;
   color: var(--color-bodytext);
   margin: 0;
@@ -86,6 +85,7 @@
 
   .tool p {
     font-size: 1.6rem;
+    width: 35.2rem;
   }
 }
 
