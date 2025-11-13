@@ -40,13 +40,16 @@ h2 {
   font-optical-sizing: auto;
 }
 
-.header-cont {
+header {
   position: fixed;
   left: 0;
   right: 0;
+  z-index: 9999;
+}
+
+.header-cont {
   background-color: var(--color-bg);
   border-bottom: 0.5px solid var(--color-border);
-
 }
 
 .web-nav {
@@ -335,7 +338,7 @@ li > .theme-toggle {
   .nav-links ul {
     display: flex;
     list-style: none;
-    gap: .5rem;
+    gap: 0.5rem;
   }
 
   .nav-links li,
