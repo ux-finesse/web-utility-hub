@@ -24,44 +24,44 @@
 }
 
 .tools {
-    display: grid;
-    gap: 2.4rem;
-    grid-template-columns: 1fr;
-  }
+  display: grid;
+  gap: 2.4rem;
+  grid-template-columns: 1fr;
+}
 
-  .tool {
-    padding: 2.7rem;
-    border-radius: 10px;
-    border: 0.5px solid var(--color-border);
-  }
+.tool {
+  padding: 2.7rem;
+  border-radius: 10px;
+  border: 0.5px solid var(--color-border);
+}
 
-  .tool:hover {
-    background-color: var(--color-hover);
-  }
+.tool:hover {
+  background-color: var(--color-hover);
+}
 
-  .tool h2 {
-    font-size: 2.4rem;
-    font-weight: 700;
-    margin-bottom: 1rem;
-    color: var(--color-headings);
-  }
+.tool h2 {
+  font-size: 2.4rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: var(--color-headings);
+}
 
-  .tool p {
-    font-size: 1.4rem;
-    font-weight: 400;
-    width: 35.2rem;
-    line-height: 1.5;
-    color: var(--color-bodytext);
-    margin: 0;
-  }
+.tool p {
+  font-size: 1.4rem;
+  font-weight: 400;
+  width: 35.2rem;
+  line-height: 1.5;
+  color: var(--color-bodytext);
+  margin: 0;
+}
 
-  .tool-icon {
-    font-size: 3rem;
-  }
+.tool-icon {
+  font-size: 3rem;
+}
 
 @media (min-width: 1024px) {
   .main-cont {
-    padding: 10.6rem 15.4rem;
+    padding: 10.6rem 8.4rem;
   }
 
   .caption {
@@ -87,6 +87,10 @@
   .tool p {
     font-size: 1.6rem;
   }
+}
 
-  
+@media (min-width: 1440px) {
+  .main-cont {
+    padding: 10.6rem 15.4rem;
+  }
 }
