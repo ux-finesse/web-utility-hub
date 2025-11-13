@@ -14,13 +14,16 @@
 
 .caption h1 {
   font-size: 3.6rem;
+  font-weight: 700;
   margin-bottom: 1.2rem;
+  color: var(--color-headings);
 }
 
 .caption p {
   font-weight: 400;
   line-height: 1.5;
   font-size: 1.4rem;
+  color: var(--color-bodytext);
 }
 
 .tools {
@@ -68,8 +71,6 @@
   }
 
   .caption h1 {
-    color: var(--color-headings);
-    font-weight: 700;
     font-size: 4.6rem;
   }
 
