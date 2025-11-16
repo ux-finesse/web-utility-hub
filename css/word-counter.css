@@ -166,6 +166,7 @@ textarea {
 
 .lower {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   gap: 2rem;
   margin-top: 3rem;
@@ -216,6 +217,7 @@ textarea {
   display: flex;
   flex-direction: column;
   gap: 2rem;
+  width: 100%;
 }
 
 .tips ul li {
@@ -234,6 +236,21 @@ textarea {
   }
 
   .count-cont {
+    grid-template-columns: 2fr;
+    column-gap: 5.8rem;
+  }
+
+  .lower {
+    flex-direction: row;
+  }
+}
+
+@media (min-width: 1440px) {
+  .main-cont {
+    padding: 10.6rem 15.4rem;
+  }
+
+  .count-cont {
     grid-template-columns: 2fr 1fr;
     column-gap: 5.8rem;
   }
@@ -241,11 +258,5 @@ textarea {
   .tips {
     width: 40.5rem;
     height: 40.5rem;
-  }
-}
-
-@media (min-width: 1440px) {
-  .main-cont {
-    padding: 10.6rem 15.4rem;
   }
 }
