@@ -35,7 +35,11 @@
             <nav class="nav-links">
               <ul>
                 <li><a href="/pages/bmi-calculator.html">BMI Calculator</a></li>
-                <li><a href="/pages/word-counter.html" class="active-link">Word Counter</a></li>
+                <li>
+                  <a href="/pages/word-counter.html" class="active-link"
+                    >Word Counter</a
+                  >
+                </li>
                 <li><a href="/pages/unit-converter.html">Unit Converter</a></li>
                 <li>
                   <a href="/pages/password-gen.html">Password Generator</a>
@@ -51,7 +55,11 @@
               class="theme-toggle"
               aria-label="Toggle theme"
             >
-              <img src="/images/icons/sun.svg" class="sun-icon" alt="sun-icon" />
+              <img
+                src="/images/icons/sun.svg"
+                class="sun-icon"
+                alt="sun-icon"
+              />
               <img
                 src="/images/icons/moon.svg"
                 class="moon-icon"
@@ -98,19 +106,20 @@
               src="/images/icons/menu-dark.svg"
               class="menu-btn menu-dark"
               alt="menu-icon"
-            /><ul id="navLinks">
-            <li><a href="/pages/bmi-calculator.html">BMI Calculator</a></li>
-            <li><a href="/pages/word-counter.html">Word Counter</a></li>
-            <li><a href="/pages/unit-converter.html">Unit Converter</a></li>
-            <li><a href="/pages/password-gen.html">Password Generator</a></li>
-            <li><a href="/pages/about.html">About</a></li>
-            <li class="mobile-theme">
-              <p>Theme</p>
-              <span
-                id="theme-toggle"
-                class="theme-toggle"
-                aria-label="Toggle theme"
-              >
+            />
+            <ul id="navLinks">
+              <li><a href="/pages/bmi-calculator.html">BMI Calculator</a></li>
+              <li><a href="/pages/word-counter.html">Word Counter</a></li>
+              <li><a href="/pages/unit-converter.html">Unit Converter</a></li>
+              <li><a href="/pages/password-gen.html">Password Generator</a></li>
+              <li><a href="/pages/about.html">About</a></li>
+              <li class="mobile-theme">
+                <p>Theme</p>
+                <span
+                  id="theme-toggle"
+                  class="theme-toggle"
+                  aria-label="Toggle theme"
+                >
                   <img
                     src="/images/icons/sun.svg"
                     class="sun-icon"
@@ -121,17 +130,113 @@
                     class="moon-icon"
                     alt="moon-icon"
                   />
-              </span>
-            </li>
-          </ul>
+                </span>
+              </li>
+            </ul>
           </div>
-          
         </div>
       </div>
     </header>
 
     <main>
-      <div class="main-cont"></div>
+      <div class="main-cont">
+        <div class="breadcrumb">
+          <a href="/index.html">Home</a>
+          <div class="arrows">
+            <img
+              class="arrow-right arrow-right-dark"
+              src="/images/icons/arrow-right-light.svg"
+              alt="arrow-right"
+            />
+            <img
+              class="arrow-right arrow-right-light"
+              src="/images/icons/arrow-right-dark.svg"
+              alt="arrow-right"
+            />
+          </div>
+          <p><strong>Word Counter</strong></p>
+        </div>
+        <div class="caption">
+          <h1>Word Counter</h1>
+          <p>Real-time word and character counting tool.</p>
+        </div>
+        <div class="count-cont">
+          <div class="left-cont">
+            <div class="counter">
+              <div class="upper">
+                <div class="text-in">
+                  <p>Enter your text here</p>
+                  <textarea
+                    name="message"
+                    id="text-input"
+                    placeholder="Type or paste from clipboard....."
+                    rows="10"
+                  ></textarea>
+                  <div class="btns">
+                    <button class="btn">
+                      <div class="btn-icn">
+                        <img
+                          src="/images/icons/copy-light.svg"
+                          class="copy-btn copy-light"
+                          alt="copy-btn-dark"
+                        />
+                        <img
+                          src="/images/icons/copy-dark.svg"
+                          class="copy-btn copy-dark"
+                          alt="copy-btn-light"
+                        />
+                      </div>
+                      <p>Copy</p>
+                    </button>
+                    <button class="btn">
+                      <div class="btn-icn">
+                        <img
+                          src="/images/icons/trash-light.svg"
+                          class="trash-btn trash-light"
+                          alt="trash-btn-light"
+                        />
+                        <img
+                          src="/images/icons/trash-dark.svg"
+                          class="trash-btn trash-dark"
+                          alt="trash-btn-light"
+                        />
+                      </div>
+
+                      <p>Clear</p>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="lower">
+                <div class="words">
+                  <h2>0</h2>
+                  <p>Words</p>
+                </div>
+                <div class="char">
+                  <h2>0</h2>
+                  <p>Characters</p>
+                </div>
+                <div class="para">
+                  <h2>0</h2>
+                  <p>Paragraphs</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="tips">
+            <h2>Tips for Better Writing</h2>
+            <ul>
+              <li>Keep paragraphs concise for better readability</li>
+              <li>Monitor sentence length for clarity</li>
+              <li>Use the reading time estimate to optimize content length</li>
+              <li>Check character count for social media posts</li>
+              <li>
+                Regular word counting helps maintain consistent content length
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </main>
 
     <footer>
@@ -142,6 +247,6 @@
     </footer>
     <script src="/js/main.js"></script>
     <script src="/js/theme.js"></script>
-    <script src="/js/word-converter.js"></script>
+    <script src="/js/word-counter.js"></script>
   </body>
 </html>
