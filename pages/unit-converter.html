@@ -143,58 +143,82 @@
       <div class="main-inner">
         <div class="left-content">
       
-        <div class="converter-inputs">
-          <h3>Pick a category</h3>
+      <div class="converter-inputs">
+        <h3>Pick a category</h3>
         <div class="select-div">
-          <img src="/images/icons/ruler.png" alt="ruler-icon" class="" />
+          <img src="/images/icons/ruler.png" alt="ruler-icon" />
           <select>
-          <option value="length">Length</option>
-          <option value="weight">Weight</option>
-          <option value="temperature">Temperature</option>
-        </select></div>
+            <option value="length">Length</option>
+            <option value="weight">Weight</option>
+            <option value="temperature">Temperature</option>
+          </select>
+        </div>
+      
         <div class="converter-values hold-all">
-         <div class="other-inputs ">
-          <h4>From</h4>
-          <input placeholder="Enter value" />
-          <div class="converter-values select-div2">
-          
-          
-            <select>
-              <option value="length">Length</option>
-              <option value="weight">Weight</option>
-              <option value="temperature">Temperature</option>
-            </select>
+          <!-- FROM side -->
+          <div class="other-inputs">
+            <h4>From</h4>
+            <input placeholder="Enter value" />
+            <div class="converter-values select-div2">
+              <select>
+                <!-- Length units -->
+                <option value="m">Meters (m)</option>
+                <option value="cm">Centimeters (cm)</option>
+                <option value="km">Kilometers (km)</option>
+                <option value="ft">Feet (ft)</option>
+                <option value="in">Inches (in)</option>
+                <option value="mi">Miles (mi)</option>
+      
+                <!-- Weight units -->
+                <option value="kg">Kilograms (kg)</option>
+                <option value="g">Grams (g)</option>
+                <option value="mg">Milligrams (mg)</option>
+                <option value="lb">Pounds (lb)</option>
+                <option value="oz">Ounces (oz)</option>
+      
+                <!-- Temperature units -->
+                <option value="C">Celsius (C)</option>
+                <option value="F">Fahrenheit (F)</option>
+                <option value="K">Kelvin (K)</option>
+              </select>
+            </div>
           </div>
-         
-         </div>
-<div class="arrow-icon">
-  <center><img src="/images/icons/arrow.svg" alt="arrow-icon" /></center>
-</div>
-
-  <div class="other-inputs">
-  <h4>From</h4>
-    <input placeholder="Enter value" />
-    
-    <div class="converter-values select-div2">
-      <select>
-        <option value="length">Length</option>
-        <option value="weight">Weight</option>
-        <option value="temperature">Temperature</option>
-      </select>
-  
-    </div>
-  </div>
-
-
-
-
+      
+          <div class="arrow-icon">
+            <center><img src="/images/icons/arrow.svg" alt="arrow-icon" /></center>
+          </div>
+      
+          <!-- TO side -->
+          <div class="other-inputs">
+            <h4>To</h4>
+            <input placeholder="Converted value will appear here" readonly />
+            <div class="converter-values select-div2">
+              <select>
+                <!-- Same units as above -->
+                <option value="m">Miles (mi)</option>
+                <option value="cm">Centimeters (cm)</option>
+                <option value="km">Kilometers (km)</option>
+                <option value="ft">Feet (ft)</option>
+                <option value="in">Inches (in)</option>
+                <option value="mi">Miles (mi)</option>
+      
+                <option value="kg">Kilograms (kg)</option>
+                <option value="g">Grams (g)</option>
+                <option value="mg">Milligrams (mg)</option>
+                <option value="lb">Pounds (lb)</option>
+                <option value="oz">Ounces (oz)</option>
+      
+                <option value="C">Celsius (C)</option>
+                <option value="F">Fahrenheit (F)</option>
+                <option value="K">Kelvin (K)</option>
+              </select>
+            </div>
+          </div>
         </div>
+      
+        <button>Convert</button>
+      </div>
 
-
-    
-   
-       <button>Convert</button>
-        </div>
         
      
     </div>
@@ -203,13 +227,7 @@
       <h3>How to Use the Unit Converter</h3>
     <ol>
       <li>. Select the measurement category (length, weight, etc.)
-      
-     
-      
-     
-      
-     
-      
+
       </li>
       <li>. Choose your source unit from the dropdown</li>
       <li>. Enter the value you want to convert</li>
@@ -229,5 +247,9 @@
     <script src="/js/main.js"></script>
     <script src="/js/unit-converter.js"></script>
     <script src="/js/theme.js"></script>
+    <!-- right before </body> -->
+    <script src="/js/converter.js"></script>
+    </body>
+
   </body>
 </html>
