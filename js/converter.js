@@ -12,6 +12,28 @@ document.addEventListener("DOMContentLoaded", function () {
 
   const fromInput = fromGroup.querySelector("input");
   const toInput = toGroup.querySelector("input");
+  // === Input validation ===
+  // Allow only numbers, decimal point, and nothing else
+  function validateNumberInput(e) {
+    const value = e.target.value;
+
+    // Regex: only digits, one optional decimal point
+    if (!/^\d*\.?\d*$/.test(value)) {
+      e.target.value = value.slice(0, -1); // remove last character
+      resultBox.textContent = "Only numbers are allowed.";
+      resultBox.style.color = "red";
+      return;
+    }
+
+    // Reset error message when valid
+    resultBox.textContent = "";
+    resultBox.style.color = "";
+  }
+
+  // Apply validation to both inputs
+  fromInput.addEventListener("input", validateNumberInput);
+  toInput.addEventListener("input", validateNumberInput);
+
   const fromUnitSelect = fromGroup.querySelector(".select-div2 select");
   const toUnitSelect = toGroup.querySelector(".select-div2 select");
   const convertBtn = root.querySelector("button");
