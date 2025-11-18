@@ -1,3 +1,5 @@
+/* Mobile First */
+
 h2 {
   font-size: 3.6rem;
   line-height: 1.5;
@@ -30,8 +32,8 @@ textarea {
 }
 
 #text-input::placeholder {
-  color: var(--color-muted);
-  opacity: 0.5;
+  color: var(--color-bodytext);
+  opacity: 0.3;
 }
 
 #text-input::-webkit-scrollbar {
@@ -54,15 +56,49 @@ textarea {
 
 .main-cont {
   padding: 6.6rem 2rem;
+  max-width: 1440px;
+  margin: 0 auto;
+  width: 100%;
 }
 
 .breadcrumb {
   display: none;
 }
 
+.arrows {
+  position: relative;
+  z-index: -1;
+  width: 8px;
+  height: 8px;
+}
+
+.arrow-right {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: opacity var(--transition-speed) ease,
+    transform var(--transition-speed) ease;
+}
+
+[data-theme="light"] .arrow-right-light {
+  opacity: 1;
+}
+
+[data-theme="light"] .arrow-right-dark {
+  opacity: 0;
+}
+
+/* Dark mode: hide dark github-logo, show light github-logo */
+[data-theme="dark"] .arrow-right-light {
+  opacity: 0;
+}
+
+[data-theme="dark"] .arrow-right-dark {
+  opacity: 1;
+}
+
 .count-cont {
   display: grid;
-  grid-template-columns: 1fr;
   row-gap: 4.4rem;
 }
 
@@ -71,7 +107,7 @@ textarea {
 }
 
 .caption h1 {
-  font-size: 3.6rem;
+  font-size: 4.6rem;
   margin-bottom: 1.2rem;
   color: var(--color-headings);
   font-weight: 600;
@@ -232,11 +268,18 @@ textarea {
   }
 
   .breadcrumb {
-    display: none;
+    display: flex;
+    gap: 0.3rem;
+    align-items: center;
+  }
+
+  .breadcrumb a {
+    text-decoration: none;
+    font-weight: 400;
+    color: var(--color-bodytext);
   }
 
   .count-cont {
-    grid-template-columns: 2fr;
     column-gap: 5.8rem;
   }
 
