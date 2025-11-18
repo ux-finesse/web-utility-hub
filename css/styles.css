@@ -324,7 +324,7 @@ li > .theme-toggle {
 
   .header-cont {
     display: flex;
-    padding: 1.5rem 8rem;
+    padding: 1.5rem 3rem;
   }
 
   /* Mobile Menu */
@@ -395,7 +395,7 @@ li > .theme-toggle {
   .footer-cont {
     display: flex;
     align-items: center;
-    padding: 1.5rem 8rem;
+    padding: 1.5rem 3rem;
     justify-content: space-between;
     border-top: 0.5px solid var(--color-border);
   }
