@@ -1,3 +1,5 @@
+/* Mobile First */
+
 @import url("https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:ital,wght@0,400..900;1,400..900&family=Space+Grotesk:wght@300..700&display=swap");
 
 * {
@@ -25,6 +27,7 @@
 
 html {
   font-size: 62.5%;
+  height: 100%;
 }
 
 body {
@@ -32,6 +35,7 @@ body {
   color: var(--color-bodytext);
   font-family: "Schibsted Grotesk", sans-serif;
   font-optical-sizing: auto;
+  height: 100%;
 }
 
 h1,
@@ -45,6 +49,12 @@ header {
   left: 0;
   right: 0;
   z-index: 9999;
+}
+
+main {
+  min-height: 95vh;
+  display: flex;
+  flex-direction: column;
 }
 
 .header-cont {
@@ -359,7 +369,7 @@ li > .theme-toggle {
   .nav-links li a,
   .about-btn a {
     display: block;
-    color: var(--color-bodytext);
+    color: var(--color-headings);
     text-decoration: none;
     padding: 1rem 1.4rem;
   }
