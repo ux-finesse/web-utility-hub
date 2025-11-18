@@ -121,7 +121,7 @@ background-color: var(--color-bg);
     padding: 15px;
 width: 95%;
  
-
+color: var(--color-bodytext);
     font-size:14px;
     
 }
