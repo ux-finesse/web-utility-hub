@@ -196,7 +196,7 @@ textarea {
 
 .counter {
   border: 0.5px solid var(--color-border);
-  padding: 3rem;
+  padding: 1.5rem;
   border-radius: 10px;
 }
 
@@ -260,6 +260,12 @@ textarea {
   font-size: 1.6rem;
   margin-left: 2.5rem;
   line-height: 1.5;
+}
+
+@media (min-width:768px) {
+  .counter {
+  padding: 3rem;
+  }
 }
 
 @media (min-width: 1024px) {
