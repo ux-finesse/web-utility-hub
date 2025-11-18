@@ -1,119 +1,60 @@
-/**
- * Theme Manager - Works with multiple toggle buttons
- */
-const ThemeManager = {
-  STORAGE_KEY: "theme-preference",
-  DARK_THEME: "dark",
-  LIGHT_THEME: "light",
+// Theme engine
+document.addEventListener("DOMContentLoaded", function () {
+  const STORAGE_KEY = "theme-preference";
+  const DARK = "dark";
+  const LIGHT = "light";
+  const buttons = document.querySelectorAll("#theme-toggle");
 
-  init() {
-    // Get all theme toggle buttons (desktop + mobile)
-    this.toggleButtons = document.querySelectorAll("#theme-toggle");
+  if (buttons.length === 0) return;
 
-    if (this.toggleButtons.length === 0) {
-      return;
-    }
+  // Load theme
+  const saved = localStorage.getItem(STORAGE_KEY);
+  const theme =
+    saved ||
+    (window.matchMedia("(prefers-color-scheme: dark)").matches ? DARK : LIGHT);
+  document.documentElement.setAttribute("data-theme", theme);
+  localStorage.setItem(STORAGE_KEY, theme);
 
-    this.loadTheme();
-    this.attachEventListeners();
-  },
+  // Update meta
+  const meta = document.querySelector('meta[name="theme-color"]');
+  if (meta)
+    meta.setAttribute("content", theme === DARK ? "#1a1a2e" : "#ffffff");
 
-  loadTheme() {
-    const savedTheme = localStorage.getItem(this.STORAGE_KEY);
+  // Toggle function
+  function toggle() {
+    const current = document.documentElement.getAttribute("data-theme");
+    const newTheme = current === DARK ? LIGHT : DARK;
 
-    if (savedTheme) {
-      this.setTheme(savedTheme);
-    } else {
-      const prefersDark = window.matchMedia(
-        "(prefers-color-scheme: dark)"
-      ).matches;
-      this.setTheme(prefersDark ? this.DARK_THEME : this.LIGHT_THEME);
-    }
-  },
+    document.documentElement.setAttribute("data-theme", newTheme);
+    localStorage.setItem(STORAGE_KEY, newTheme);
 
-  setTheme(theme) {
-    document.documentElement.setAttribute("data-theme", theme);
-    localStorage.setItem(this.STORAGE_KEY, theme);
-    this.updateMetaTheme(theme);
-  },
+    if (meta)
+      meta.setAttribute("content", newTheme === DARK ? "#1a1a2e" : "#ffffff");
 
-  toggleTheme() {
-    const currentTheme = document.documentElement.getAttribute("data-theme");
-    const newTheme =
-      currentTheme === this.DARK_THEME ? this.LIGHT_THEME : this.DARK_THEME;
-
-    this.setTheme(newTheme);
-    this.animateToggle();
-  },
-
-  updateMetaTheme(theme) {
-    const metaTheme = document.querySelector('meta[name="theme-color"]');
-    if (metaTheme) {
-      const color = theme === this.DARK_THEME ? "#1a1a2e" : "#ffffff";
-      metaTheme.setAttribute("content", color);
-    }
-  },
-
-  animateToggle() {
-    // Animate all toggle buttons
-    this.toggleButtons.forEach((button) => {
-      button.style.transform = "scale(0.9)";
-      setTimeout(() => {
-        button.style.transform = "scale(1)";
-      }, 150);
+    buttons.forEach((btn) => {
+      btn.style.transform = "scale(0.9)";
+      setTimeout(() => (btn.style.transform = "scale(1)"), 150);
     });
-  },
+  }
 
-  attachEventListeners() {
-    // Attach listeners to all toggle buttons
-    this.toggleButtons.forEach((button) => {
-      // Click event
-      button.addEventListener("click", (e) => {
-        e.preventDefault();
-        e.stopPropagation();
-        this.toggleTheme();
-      });
-
-      // Touch event for mobile
-      button.addEventListener("touchend", (e) => {
-        e.preventDefault();
-        e.stopPropagation();
-        this.toggleTheme();
-      });
-
-      // Keyboard accessibility
-      button.addEventListener("keydown", (e) => {
-        if (e.key === "Enter" || e.key === " ") {
-          e.preventDefault();
-          this.toggleTheme();
-        }
-      });
+  // Attach listeners
+  buttons.forEach((btn) => {
+    btn.addEventListener("click", toggle);
+    btn.addEventListener("touchend", (e) => {
+      e.preventDefault();
+      toggle();
     });
+  });
 
-    // System preference change
-    window
-      .matchMedia("(prefers-color-scheme: dark)")
-      .addEventListener("change", (e) => {
-        if (!localStorage.getItem(this.STORAGE_KEY)) {
-          this.setTheme(e.matches ? this.DARK_THEME : this.LIGHT_THEME);
-        }
-      });
-
-    // Keyboard shortcut (Ctrl/Cmd + Shift + D)
-    document.addEventListener("keydown", (e) => {
-      if ((e.ctrlKey || e.metaKey) && e.shiftKey && e.key === "D") {
-        e.preventDefault();
-        this.toggleTheme();
+  // System preference change
+  window
+    .matchMedia("(prefers-color-scheme: dark)")
+    .addEventListener("change", (e) => {
+      if (!localStorage.getItem(STORAGE_KEY)) {
+        document.documentElement.setAttribute(
+          "data-theme",
+          e.matches ? DARK : LIGHT
+        );
       }
     });
-  },
-
-  getCurrentTheme() {
-    return document.documentElement.getAttribute("data-theme");
-  },
-};
-
-// Initialize
-document.addEventListener("DOMContentLoaded", () => {
-  ThemeManager.init();
 });
