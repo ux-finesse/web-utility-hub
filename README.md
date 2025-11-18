@@ -114,9 +114,7 @@ Result: BMI = 22.86 (Normal Weight)
 // Paste or type your text
 // Real-time statistics appear:
 Words: 150
-Characters (with spaces): 892
-Characters (without spaces): 742
-Sentences: 8
+Characters: 892
 Paragraphs: 3
 ```
 
