@@ -1,389 +1,393 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&family=Schibsted+Grotesk:wght@400;600&display=swap');
 
-    /* ===============================
-       PAGE LAYOUT
-    =============================== */
-    body {
-        margin: 0;
-        font-family: 'Schibsted Grotesk', sans-serif;
-        background: #FAFAFA;
-        color: #191919;
-    }
+/* ===============================
+   PAGE LAYOUT
+=============================== */
+body {
+    margin: 0;
+    font-family: 'Schibsted Grotesk', sans-serif;
+    background: var(--color-bg);
+    color: var(--color-bodytext);
+}
 
-    .conten-container {
-        width: 100%;
-        min-height: 95vh;
-        padding: 6rem 1rem 2rem;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
+.conten-container {
+    width: 100%;
+    min-height: 95vh;
+    padding: 6rem 1rem 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
-    .main-cont {
-        width: 100%;
-        max-width: 1200px;
-    }
+.main-cont {
+    width: 100%;
+    max-width: 1200px;
+}
 
-    /* ===============================
-       BREADCRUMB
-    =============================== */
-    .breadcrumb {
-        display: flex;
-        align-items: center;
-        gap: 6px;
-        font-size: 12px;
-        margin-bottom: 16px;
-    }
+/* ===============================
+   BREADCRUMB
+=============================== */
+.breadcrumb {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 12px;
+    margin-bottom: 16px;
+}
 
-    .breadcrumb a {
-        color: #191919;
-        text-decoration: none;
-    }
+.breadcrumb a {
+    color: var(--color-headings);
+    text-decoration: none;
+}
 
-    .breadcrumb .breadcrumb-current {
-        font-weight: 600;
-    }
+.breadcrumb .breadcrumb-current {
+    font-weight: 600;
+}
 
-    .breadcrumb-arrow {
-        width: 8px;
-        height: 8px;
-    }
+.breadcrumb-arrow {
+    width: 8px;
+    height: 8px;
+}
 
-    /* ===============================
-       PAGE TITLE + SUBTITLE
-    =============================== */
-    .page-header {
-        margin-bottom: 40px;
-    }
+/* ===============================
+   PAGE TITLE + SUBTITLE
+=============================== */
+.page-header {
+    margin-bottom: 40px;
+}
 
-    .page-title {
-        font-family: 'Space Grotesk', sans-serif;
-        font-size: 46px;
-        font-weight: 700;
-        margin: 0 0 8px;
-    }
+.page-title {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 46px;
+    font-weight: 700;
+    margin: 0 0 8px;
+    color: var(--color-headings);
+}
 
-    .page-subtitle {
-        font-size: 16px;
-        color: #393939;
-        margin: 0;
-    }
+.page-subtitle {
+    font-size: 16px;
+    color: var(--color-bodytext);
+    margin: 0;
+}
 
-    /* ===============================
-       TWO-COLUMN WRAPPER
-    =============================== */
+/* ===============================
+   TWO-COLUMN WRAPPER
+=============================== */
+.bmi-calculator-wrapper {
+    display: flex;
+    gap: 52px;
+}
+
+/* ===============================
+   LEFT — CALCULATOR CARD
+=============================== */
+.calculator-card {
+    background: var(--color-bg);
+    border: 0.5px solid var(--color-border);
+    border-radius: 10px;
+    padding: 30px;
+    flex: 1 1 733px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.calculator-title {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    margin: 0;
+    color: var(--color-headings);
+}
+
+/* UNIT SYSTEM SELECTOR */
+.unit-selector {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
+    gap: 10px;
+    width: 100%;
+    height: 44px;
+    background: var(--color-bg);
+    border: 0.5px solid var(--color-border);
+    border-radius: 7px;
+    position: relative;
+}
+
+.unit-selector-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+    gap: 10px;
+    width: 78px;
+    height: 24px;
+}
+
+.unit-icon {
+    width: 24px;
+    height: 24px;
+}
+
+.unit-text {
+    font-family: 'Schibsted Grotesk', sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    color: var(--color-bodytext);
+}
+
+/* Custom Select Styling */
+.unit-selector select {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.unit-arrow {
+    width: 18px;
+    height: 18px;
+}
+
+/* INPUT FIELDS */
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.input-label {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--color-headings);
+}
+
+.input-field {
+    padding: 10px 15px;
+    border-radius: 7px;
+    border: 0.5px solid var(--color-border);
+    font-size: 14px;
+    color: var(--color-bodytext);
+    font-family: 'Schibsted Grotesk', sans-serif;
+    background: var(--color-bg);
+}
+
+.input-field::placeholder {
+    color: var(--color-bodytext);
+    font-weight: 500;
+    font-size: 12px;
+}
+
+/* CALCULATE BUTTON */
+.calculate-btn {
+    width: 100%;
+    height: 48px;
+    background: var(--color-headings);
+    color: var(--color-bg);
+    border: none;
+    border-radius: 8px;
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.calculate-btn:hover {
+    background: var(--color-bodytext);
+}
+
+/* RESULT SECTION */
+.result-card {
+    background: var(--color-bg);
+    border: 0.5px solid var(--color-border);
+    border-radius: 7px;
+    padding: 16px 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+}
+
+.result-title {
+    font-family: 'Schibsted Grotesk', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    color: var(--color-bodytext);
+}
+
+.bmi-value {
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 700;
+    font-size: 36px;
+    color: var(--color-headings);
+}
+
+.bmi-category {
+    font-family: 'Schibsted Grotesk', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    color: var(--color-headings);
+}
+
+.bmi-message {
+    font-family: 'Schibsted Grotesk', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    color: var(--color-bodytext);
+}
+
+/* ===============================
+   RIGHT — INFO CARD
+=============================== */
+.info-card {
+    background: var(--color-hover);
+    border-radius: 10px;
+    padding: 30px;
+    margin-bottom: 30px;
+}
+
+.info-card h3 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    margin: 0 0 12px;
+    color: var(--color-headings);
+}
+
+.info-card ul {
+    padding-left: 20px;
+    margin: 0;
+}
+
+.info-card li {
+    font-family: 'Schibsted Grotesk', sans-serif;
+    font-size: 16px;
+    margin-bottom: 8px;
+    color: var(--color-bodytext);
+}
+
+/* ===============================
+   BMI CATEGORIES CARD
+=============================== */
+.categories-card {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 30px;
+    gap: 21px;
+    width: 100%;
+    background: var(--color-bg);
+    border: 0.5px solid var(--color-border);
+    border-radius: 10px;
+}
+
+.categories-title {
+    width: 100%;
+    height: 26px;
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 26px;
+    color: var(--color-headings);
+}
+
+.category-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 21px;
+    width: 100%;
+    height: 20px;
+}
+
+.category-info {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+    gap: 5px;
+    width: 190.5px;
+    height: 20px;
+}
+
+.category-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 100px;
+}
+
+.underweight-dot {
+    background: #0D6AAD;
+}
+
+.normal-dot {
+    background: #22C55E;
+}
+
+.overweight-dot {
+    background: #F7DF1E;
+}
+
+.obese-dot {
+    background: #E44D26;
+}
+
+.category-name {
+    font-family: 'Schibsted Grotesk', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    color: var(--color-bodytext);
+}
+
+.category-range {
+    font-family: 'Schibsted Grotesk', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    color: var(--color-bodytext);
+}
+
+/* ===============================
+   RESPONSIVE
+=============================== */
+@media (max-width: 1024px) {
     .bmi-calculator-wrapper {
-        display: flex;
-        gap: 52px;
-    }
-
-    /* ===============================
-       LEFT — CALCULATOR CARD
-    =============================== */
-    .calculator-card {
-        background: #FFFFFF;
-        border: 0.5px solid #D9D9D9;
-        border-radius: 10px;
-        padding: 30px;
-        flex: 1 1 733px;
-        display: flex;
         flex-direction: column;
-        gap: 20px;
+        gap: 30px;
     }
 
-    .calculator-title {
-        font-family: 'Space Grotesk', sans-serif;
-        font-size: 16px;
-        font-weight: 700;
-        margin: 0;
-    }
-
-    /* UNIT SYSTEM SELECTOR */
-    .unit-selector {
-        box-sizing: border-box;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        padding: 10px 15px;
-        gap: 10px;
-        width: 100%;
-        height: 44px;
-        background: #FFFFFF;
-        border: 0.5px solid #D9D9D9;
-        border-radius: 7px;
-        position: relative;
-    }
-
-    .unit-selector-content {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        padding: 0px;
-        gap: 10px;
-        width: 78px;
-        height: 24px;
-    }
-
-    .unit-icon {
-        width: 24px;
-        height: 24px;
-    }
-
-    .unit-text {
-        font-family: 'Schibsted Grotesk', sans-serif;
-        font-weight: 600;
-        font-size: 14px;
-        color: #393939;
-    }
-
-    /* Custom Select Styling */
-    .unit-selector select {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        opacity: 0;
-        cursor: pointer;
-    }
-
-    .unit-arrow {
-        width: 18px;
-        height: 18px;
-        /* transform: rotate(90deg); */
-    }
-
-    /* INPUT FIELDS */
-    .input-group {
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    .input-label {
-        font-family: 'Space Grotesk', sans-serif;
-        font-size: 14px;
-        font-weight: 700;
-        color: #191919;
-    }
-
-    .input-field {
-        padding: 10px 15px;
-        border-radius: 7px;
-        border: 0.5px solid #D9D9D9;
-        font-size: 14px;
-        color: #393939;
-        font-family: 'Schibsted Grotesk', sans-serif;
-    }
-
-    .input-field::placeholder {
-        color: #393939;
-        font-weight: 500;
-        font-size: 12px;
-    }
-
-    /* CALCULATE BUTTON */
-    .calculate-btn {
-        width: 100%;
-        height: 48px;
-        background: #191919;
-        color: #FFFFFF;
-        border: none;
-        border-radius: 8px;
-        font-family: 'Space Grotesk', sans-serif;
-        font-weight: 700;
-        font-size: 16px;
-        cursor: pointer;
-        transition: background 0.2s;
-    }
-
-    .calculate-btn:hover {
-        background: #333333;
-    }
-
-    /* RESULT SECTION */
-    .result-card {
-        background: #FFFFFF;
-        border: 0.5px solid #D9D9D9;
-        border-radius: 7px;
-        padding: 16px 15px;
-        display: flex;
-        flex-direction: column;
-        gap: 9px;
-    }
-
-    .result-title {
-        font-family: 'Schibsted Grotesk', sans-serif;
-        font-weight: 600;
-        font-size: 16px;
-        color: #393939;
-    }
-
-    .bmi-value {
-        font-family: 'Space Grotesk', sans-serif;
-        font-weight: 700;
-        font-size: 36px;
-        color: #191919;
-    }
-
-    .bmi-category {
-        font-family: 'Schibsted Grotesk', sans-serif;
-        font-weight: 600;
-        font-size: 16px;
-    }
-
-    .bmi-message {
-        font-family: 'Schibsted Grotesk', sans-serif;
-        font-weight: 400;
-        font-size: 14px;
-        color: #393939;
-    }
-
-    /* ===============================
-       RIGHT — INFO CARD
-    =============================== */
+    .calculator-card,
     .info-card {
-        background: #F2F2F2;
-        border-radius: 10px;
-        padding: 30px;
-        margin-bottom: 30px;
-    }
-
-    .info-card h3 {
-        font-family: 'Space Grotesk', sans-serif;
-        font-size: 20px;
-        font-weight: 700;
-        margin: 0 0 12px;
-    }
-
-    .info-card ul {
-        padding-left: 20px;
-        margin: 0;
-    }
-
-    .info-card li {
-        font-family: 'Schibsted Grotesk', sans-serif;
-        font-size: 16px;
-        margin-bottom: 8px;
-        color: #393939;
-    }
-
-    /* ===============================
-       BMI CATEGORIES CARD
-    =============================== */
-    .categories-card {
-        box-sizing: border-box;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 30px;
-        gap: 21px;
         width: 100%;
-        background: #FFFFFF;
-        border: 0.5px solid #D9D9D9;
-        border-radius: 10px;
     }
+}
 
-    .categories-title {
-        width: 100%;
-        height: 26px;
-        font-family: 'Space Grotesk', sans-serif;
-        font-weight: 700;
-        font-size: 20px;
-        line-height: 26px;
-        color: #191919;
+@media (max-width: 768px) {
+    .breadcrumb,
+    .page-header {
+        text-align: left;
+        margin-left: 16px;
     }
-
+    
     .category-row {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: flex-start;
-        padding: 0px;
-        gap: 21px;
-        width: 100%;
-        height: 20px;
+        flex-direction: column;
+        height: auto;
+        gap: 10px;
     }
-
-    .category-info {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        padding: 0px;
-        gap: 5px;
-        width: 190.5px;
-        height: 20px;
-    }
-
-    .category-dot {
-        width: 8px;
-        height: 8px;
-        border-radius: 100px;
-    }
-
-    .underweight-dot {
-        background: #0D6AAD;
-    }
-
-    .normal-dot {
-        background: #22C55E;
-    }
-
-    .overweight-dot {
-        background: #F7DF1E;
-    }
-
-    .obese-dot {
-        background: #E44D26;
-    }
-
-    .category-name {
-        font-family: 'Schibsted Grotesk', sans-serif;
-        font-weight: 400;
-        font-size: 16px;
-        line-height: 20px;
-        color: #393939;
-    }
-
+    
     .category-range {
-        font-family: 'Schibsted Grotesk', sans-serif;
-        font-weight: 400;
-        font-size: 16px;
-        line-height: 20px;
-        color: #393939;
+        margin-left: 13px;
     }
-
-    /* ===============================
-       RESPONSIVE
-    =============================== */
-    @media (max-width: 1024px) {
-        .bmi-calculator-wrapper {
-            flex-direction: column;
-            gap: 30px;
-        }
-
-        .calculator-card,
-        .info-card {
-            width: 100%;
-        }
-    }
-
-    @media (max-width: 768px) {
-        .breadcrumb,
-        .page-header {
-            text-align: left;
-            margin-left: 16px;
-        }
-        
-        .category-row {
-            flex-direction: column;
-            height: auto;
-            gap: 10px;
-        }
-        
-        .category-range {
-            margin-left: 13px;
-        }
-    }
+}

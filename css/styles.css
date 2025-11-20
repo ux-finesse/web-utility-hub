@@ -407,3 +407,12 @@ li > .theme-toggle {
     color: var(--color-bodytext);
   }
 }
+
+
+[data-theme="light"] .breadcrumb-arrow path {
+    stroke: #292D32;
+}
+
+[data-theme="dark"] .breadcrumb-arrow path {
+    stroke: #e5e7eb;
+}
