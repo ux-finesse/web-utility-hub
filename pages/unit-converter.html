@@ -36,7 +36,11 @@
               <ul>
                 <li><a href="/pages/bmi-calculator.html">BMI Calculator</a></li>
                 <li><a href="/pages/word-counter.html">Word Counter</a></li>
-                <li><a href="/pages/unit-converter.html" class="active-link">Unit Converter</a></li>
+                <li>
+                  <a href="/pages/unit-converter.html" class="active-link"
+                    >Unit Converter</a
+                  >
+                </li>
                 <li>
                   <a href="/pages/password-gen.html">Password Generator</a>
                 </li>
@@ -51,7 +55,11 @@
               class="theme-toggle"
               aria-label="Toggle theme"
             >
-              <img src="/images/icons/sun.svg" class="sun-icon" alt="sun-icon" />
+              <img
+                src="/images/icons/sun.svg"
+                class="sun-icon"
+                alt="sun-icon"
+              />
               <img
                 src="/images/icons/moon.svg"
                 class="moon-icon"
@@ -98,19 +106,20 @@
               src="/images/icons/menu-dark.svg"
               class="menu-btn menu-dark"
               alt="menu-icon"
-            /><ul id="navLinks">
-            <li><a href="/pages/bmi-calculator.html">BMI Calculator</a></li>
-            <li><a href="/pages/word-counter.html">Word Counter</a></li>
-            <li><a href="/pages/unit-converter.html">Unit Converter</a></li>
-            <li><a href="/pages/password-gen.html">Password Generator</a></li>
-            <li><a href="/pages/about.html">About</a></li>
-            <li class="mobile-theme">
-              <p>Theme</p>
-              <span
-                id="theme-toggle"
-                class="theme-toggle"
-                aria-label="Toggle theme"
-              >
+            />
+            <ul id="navLinks">
+              <li><a href="/pages/bmi-calculator.html">BMI Calculator</a></li>
+              <li><a href="/pages/word-counter.html">Word Counter</a></li>
+              <li><a href="/pages/unit-converter.html">Unit Converter</a></li>
+              <li><a href="/pages/password-gen.html">Password Generator</a></li>
+              <li><a href="/pages/about.html">About</a></li>
+              <li class="mobile-theme">
+                <p>Theme</p>
+                <span
+                  id="theme-toggle"
+                  class="theme-toggle"
+                  aria-label="Toggle theme"
+                >
                   <img
                     src="/images/icons/sun.svg"
                     class="sun-icon"
@@ -121,120 +130,143 @@
                     class="moon-icon"
                     alt="moon-icon"
                   />
-              </span>
-            </li>
-          </ul>
+                </span>
+              </li>
+            </ul>
           </div>
-          
         </div>
       </div>
     </header>
 
     <main>
-  <div class="main-cont">
-    <ul>
-      <li><a href="/index.html">Home</a></li>
-      <li>></li>
-      <li>Unit Converter</li>
-    </ul>
-<h1>Unit Converter</h1>
-<p>Convert between multiple unit types (length, weight, temperature).</p>
-      
-      <div class="main-inner">
-        <div class="left-content">
-      
-      <div class="converter-inputs">
-        <h3>Pick a category</h3>
-        <div class="select-div">
-          <img src="/images/icons/ruler.png" alt="ruler-icon" />
-          <select>
-            <option value="length">Length</option>
-            <option value="weight">Weight</option>
-            <option value="temperature">Temperature</option>
-          </select>
+      <div class="main-cont">
+        <div class="breadcrumb">
+          <a href="/index.html">Home</a>
+          <div class="arrows">
+            <img
+              class="arrow-right arrow-right-dark"
+              src="/images/icons/arrow-right-light.svg"
+              alt="arrow-right"
+            />
+            <img
+              class="arrow-right arrow-right-light"
+              src="/images/icons/arrow-right-dark.svg"
+              alt="arrow-right"
+            />
+          </div>
+          <p><strong>Unit Converter</strong></p>
         </div>
-      
-        <div class="converter-values hold-all">
-          <!-- FROM side -->
-          <div class="other-inputs">
-            <h4>From</h4>
-            <input placeholder="Enter value" />
-            <div class="converter-values select-div2">
-              <select>
-                <!-- Length units -->
-                <option value="m">Meters (m)</option>
-                <option value="cm">Centimeters (cm)</option>
-                <option value="km">Kilometers (km)</option>
-                <option value="ft">Feet (ft)</option>
-                <option value="in">Inches (in)</option>
-                <option value="mi">Miles (mi)</option>
-      
-                <!-- Weight units -->
-                <option value="kg">Kilograms (kg)</option>
-                <option value="g">Grams (g)</option>
-                <option value="mg">Milligrams (mg)</option>
-                <option value="lb">Pounds (lb)</option>
-                <option value="oz">Ounces (oz)</option>
-      
-                <!-- Temperature units -->
-                <option value="C">Celsius (C)</option>
-                <option value="F">Fahrenheit (F)</option>
-                <option value="K">Kelvin (K)</option>
-              </select>
+
+        <div class="caption">
+          <h1>Unit Converter</h1>
+          <p>
+            Convert between multiple unit types (length, weight, temperature).
+          </p>
+        </div>
+
+        <div class="main-inner">
+          <div class="left-content">
+            <div class="converter-inputs">
+              <p>Pick a category</p>
+              <div class="select-div">
+                <select id="select-div">
+                  <option value="length">Length</option>
+                  <option value="weight">Weight</option>
+                  <option value="temperature">Temperature</option>
+                </select>
+              </div>
+
+              <div class="converter-values hold-all">
+                <!-- FROM side -->
+                <div class="other-inputs">
+                  <h4>From</h4>
+                  <input placeholder="Enter value" />
+                  <div class="converter-values select-div2">
+                    <select>
+                      <!-- Length units -->
+                      <option value="m">Meters (m)</option>
+                      <option value="cm">Centimeters (cm)</option>
+                      <option></option>
+                      <option value="km">Kilometers (km)</option>
+                      <option></option>
+                      <option value="ft">Feet (ft)</option>
+                      <option value="in">Inches (in)</option>
+                      <option></option>
+                      <option value="mi">Miles (mi)</option>
+                      <option>
+                        <!-- Weight units -->
+                      </option>
+
+                      <option value="kg">Kilograms (kg)</option>
+                      <option></option>
+                      <option value="g">Grams (g)</option>
+                      <option value="mg">Milligrams (mg)</option>
+                      <option></option>
+                      <option value="lb">Pounds (lb)</option>
+                      <option></option>
+                      <option value="oz">Ounces (oz)</option>
+                      <option>
+                        <!-- Temperature units -->
+                      </option>
+
+                      <option value="C">Celsius (C)</option>
+                      <option></option>
+                      <option value="F">Fahrenheit (F)</option>
+                      <option></option>
+                      <option value="K">Kelvin (K)</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="arrow-icon">
+                    <img class="arrow-swap arrow-swap-dark" src="/images/icons/arrow-swap-dark.svg" alt="arrow-icon" />
+                    <img class="arrow-swap arrow-swap-light" src="/images/icons/arrow-swap-light.svg" alt="arrow-icon" />
+                </div>
+
+                <!-- TO side -->
+                <div class="other-inputs">
+                  <h4>To</h4>
+                  <input
+                    placeholder="Result"
+                    readonly
+                  />
+                  <div class="converter-values select-div2">
+                    <select>
+                      <!-- Same units as above -->
+                      <option value="m">Miles (mi)</option>
+                      <option value="cm">Centimeters (cm)</option>
+                      <option value="km">Kilometers (km)</option>
+                      <option value="ft">Feet (ft)</option>
+                      <option value="in">Inches (in)</option>
+                      <option value="mi">Miles (mi)</option>
+
+                      <option value="kg">Kilograms (kg)</option>
+                      <option value="g">Grams (g)</option>
+                      <option value="mg">Milligrams (mg)</option>
+                      <option value="lb">Pounds (lb)</option>
+                      <option value="oz">Ounces (oz)</option>
+
+                      <option value="C">Celsius (C)</option>
+                      <option value="F">Fahrenheit (F)</option>
+                      <option value="K">Kelvin (K)</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <button>Convert</button>
             </div>
           </div>
-      
-          <div class="arrow-icon">
-            <center><img src="/images/icons/arrow.svg" alt="arrow-icon" /></center>
-          </div>
-      
-          <!-- TO side -->
-          <div class="other-inputs">
-            <h4>To</h4>
-            <input placeholder="Converted value will appear here" readonly />
-            <div class="converter-values select-div2">
-              <select>
-                <!-- Same units as above -->
-                <option value="m">Miles (mi)</option>
-                <option value="cm">Centimeters (cm)</option>
-                <option value="km">Kilometers (km)</option>
-                <option value="ft">Feet (ft)</option>
-                <option value="in">Inches (in)</option>
-                <option value="mi">Miles (mi)</option>
-      
-                <option value="kg">Kilograms (kg)</option>
-                <option value="g">Grams (g)</option>
-                <option value="mg">Milligrams (mg)</option>
-                <option value="lb">Pounds (lb)</option>
-                <option value="oz">Ounces (oz)</option>
-      
-                <option value="C">Celsius (C)</option>
-                <option value="F">Fahrenheit (F)</option>
-                <option value="K">Kelvin (K)</option>
-              </select>
-            </div>
+          <div class="right-content">
+            <h2>How to Use the Unit Converter</h2>
+            <ul>
+              <li>Select the measurement category (length, weight, etc.)</li>
+              <li>Choose your source unit from the dropdown</li>
+              <li>Enter the value you want to convert</li>
+              <li>Select the target unit for conversion</li>
+              <li>Get instant, accurate conversion results</li>
+            </ul>
           </div>
         </div>
-      
-        <button>Convert</button>
-      </div>
-
-        
-     
-    </div>
-    <div class="right-content">
-     
-      <h3>How to Use the Unit Converter</h3>
-    <ol>
-      <li>. Select the measurement category (length, weight, etc.)
-
-      </li>
-      <li>. Choose your source unit from the dropdown</li>
-      <li>. Enter the value you want to convert</li>
-      <li>. Select the target unit for conversion</li>
-      <li>. Get instant, accurate conversion results</li>
-    </ol>
-    </div>
       </div>
     </main>
 
@@ -247,9 +279,5 @@
     <script src="/js/main.js"></script>
     <script src="/js/unit-converter.js"></script>
     <script src="/js/theme.js"></script>
-    <!-- right before </body> -->
-    <script src="/js/converter.js"></script>
-    </body>
-
   </body>
 </html>

@@ -116,7 +116,7 @@ textarea {
 .caption p {
   font-weight: 400;
   line-height: 1.5;
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   color: var(--color-bodytext);
 }
 
@@ -238,7 +238,7 @@ textarea {
 }
 
 .tips {
-  padding: 3rem;
+  padding: 1.5rem;
   border: 0.5px solid var(--color-border);
   background-color: var(--color-hover);
   border-radius: 1rem;
@@ -262,9 +262,9 @@ textarea {
   line-height: 1.5;
 }
 
-@media (min-width:768px) {
+@media (min-width: 768px) {
   .counter {
-  padding: 3rem;
+    padding: 3rem;
   }
 }
 
@@ -286,11 +286,23 @@ textarea {
   }
 
   .count-cont {
-    column-gap: 5.8rem;
+        grid-template-columns: 2fr;
+        column-gap: 5.8rem;
   }
 
   .lower {
     flex-direction: row;
+  }
+
+   .tips {
+    padding: 30px;
+    height: fit-content;
+  }
+}
+@media (min-width: 1280px) {
+  .count-cont {
+    grid-template-columns: 2fr 1fr;
+    column-gap: 5.8rem;
   }
 }
 
@@ -305,7 +317,7 @@ textarea {
   }
 
   .tips {
-    width: 40.5rem;
-    height: 40.5rem;
+    padding: 30px;
+    height: fit-content;
   }
 }

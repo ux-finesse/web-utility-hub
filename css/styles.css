@@ -14,7 +14,12 @@
   --color-headings: #191919;
   --color-hover: #f2f2f2;
   --color-border: #d9d9d9;
+  --color-button: #0a0a0a;
+  --color-button-text: #ffffff;
+  --color-button-hover: #171717;
+
   --transition-speed: 0.3s;
+
 }
 
 [data-theme="dark"] {
@@ -23,6 +28,11 @@
   --color-headings: #fafafa;
   --color-hover: #171717;
   --color-border: #262626;
+  --color-button: #ffffff;
+  --color-button-text: #0a0a0a;
+  --color-button-hover: #f2f2f2;
+
+
 }
 
 html {
