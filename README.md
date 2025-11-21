@@ -22,8 +22,10 @@ Web Utility Hub is an all-in-one utility platform that provides four essential t
 ## 📸 Screenshots
 
 ### Desktop View
+<img width="2880" height="1728" alt="screencapture-web-utility-hub-beige-vercel-app-2025-11-21-08_59_01" src="https://github.com/user-attachments/assets/21ec9ae9-d38f-456c-88e6-153750ff912e" />
 
 ### Mobile Responsive
+<img width="544" height="1491" alt="screencapture-web-utility-hub-beige-vercel-app-2025-11-21-09_00_20" src="https://github.com/user-attachments/assets/f97c7fc0-a003-490e-9704-b0e9b08c2ebc" />
 
 ---
 
