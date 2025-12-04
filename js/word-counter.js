@@ -20,17 +20,19 @@ document.addEventListener("DOMContentLoaded", function () {
     const words =
       trimmed === ""
         ? 0
-        : trimmed.split(/\s+/).filter((w) => w.length > 0).length;
+        : trimmed.split(/\s+/).filter((word) => word.length > 0).length;
     wordDisplay.textContent = words;
 
     // Characters count
-    charDisplay.textContent = text.length;
+    const chars = text.replace(/\s/g, "").length; //Ensures space between characters are not counted as a character.
+    charDisplay.textContent = chars;
 
     // Paragraphs count
     const paragraphs =
       text.trim() === ""
         ? 0
-        : text.split(/\n+/).filter((p) => p.trim().length > 0).length;
+        : text.split(/\n+/).filter((paragraph) => paragraph.trim().length > 0)
+            .length;
     paraDisplay.textContent = paragraphs;
   }
 
@@ -48,10 +50,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Copying to clipboard
     navigator.clipboard.writeText(text).then(() => {
-      const btnText = copyBtn.querySelector("p");
-      const originalText = btnText.textContent;
-      btnText.textContent = "Copied!";
-      setTimeout(() => (btnText.textContent = originalText), 2000);
+      const btnIcn = copyBtn.querySelector(".btn-icn");
+      const originalIcn = btnIcn.innerHTML;
+      btnIcn.innerHTML = `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>`;
+      setTimeout(() => (btnIcn.innerHTML = originalIcn), 2000);
     });
   });
 

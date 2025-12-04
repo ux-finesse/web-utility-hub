@@ -21,6 +21,7 @@ textarea {
   font-size: 1.4rem;
   color: var(--color-bodytext);
   line-height: 1.5;
+  font-size: 16px;
   resize: vertical;
 }
 
@@ -34,6 +35,7 @@ textarea {
 #text-input::placeholder {
   color: var(--color-bodytext);
   opacity: 0.3;
+  font-size: 14px;
 }
 
 #text-input::-webkit-scrollbar {

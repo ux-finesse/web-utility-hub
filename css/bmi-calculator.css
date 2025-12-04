@@ -172,6 +172,7 @@ body {
   opacity: 0;
   cursor: pointer;
   color: var(--color-bodytext);
+  font-size: 14px;
 }
 
 .unit-arrow {
@@ -199,16 +200,35 @@ body {
   border-radius: 7px;
   border: 0.5px solid var(--color-border);
   background-color: var(--color-bg);
-  font-size: 14px;
+  font-size: 16px;
   color: var(--color-bodytext);
   font-family: "Schibsted Grotesk", sans-serif;
+}
+
+[data-theme="light"] input {
+  outline-color: var(--color-headings);
+}
+[data-theme="dark"] input {
+  outline-color: var(--color-border);
 }
 
 .input-field::placeholder {
   color: var(--color-bodytext);
   font-weight: 400;
-  font-size: 12px;
-  opacity: 0.5;
+  font-size: 14px;
+  opacity: 0.3;
+}
+
+/* Removes arrows for Chrome, Safari, Edge, and Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0; /* Ensures no extra spacing remains */
+}
+
+/* Removes arrows for Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
 }
 
 /* CALCULATE BUTTON */

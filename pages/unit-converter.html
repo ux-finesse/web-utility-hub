@@ -180,7 +180,12 @@
                 <!-- FROM side -->
                 <div class="other-inputs">
                   <h4>From</h4>
-                  <input placeholder="Enter value" />
+                  <input
+                    type="text"
+                    inputmode="numeric"
+                    pattern="[0-9]*"
+                    placeholder="Enter value"
+                  />
                   <div class="converter-values select-div2">
                     <select>
                       <!-- Length units -->
@@ -219,17 +224,23 @@
                 </div>
 
                 <div class="arrow-icon">
-                    <img class="arrow-swap arrow-swap-dark" src="/images/icons/arrow-swap-dark.svg" alt="arrow-icon" />
-                    <img class="arrow-swap arrow-swap-light" src="/images/icons/arrow-swap-light.svg" alt="arrow-icon" />
+                  <img
+                    class="arrow-swap arrow-swap-dark"
+                    src="/images/icons/arrow-swap-dark.svg"
+                    alt="arrow-icon"
+                  />
+                  <img
+                    class="arrow-swap arrow-swap-light"
+                    src="/images/icons/arrow-swap-light.svg"
+                    alt="arrow-icon"
+                  />
                 </div>
 
                 <!-- TO side -->
                 <div class="other-inputs">
                   <h4>To</h4>
-                  <input
-                    placeholder="Result"
-                    readonly
-                  />
+                  <input type="text" placeholder="Result" readonly />
+                    
                   <div class="converter-values select-div2">
                     <select>
                       <!-- Same units as above -->
