@@ -25,8 +25,8 @@
     });
 
     // Checkbox change → update strength
-    [includeSymbols, includeUppercase, includeLowercase, includeNumbers].forEach(cb => {
-        cb.addEventListener("change", updateStrength);
+    [includeSymbols, includeUppercase, includeLowercase, includeNumbers].forEach(checkbox => {
+        checkbox.addEventListener("change", updateStrength);
     });
 
     // Generate password

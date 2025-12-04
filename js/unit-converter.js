@@ -12,6 +12,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   const fromInput = fromGroup.querySelector("input");
   const toInput = toGroup.querySelector("input");
+
   // === Input validation ===
   // Allow only numbers, decimal point, and nothing else
   function validateNumberInput(e) {
@@ -158,6 +159,10 @@ document.addEventListener("DOMContentLoaded", function () {
     resultBox.textContent = "----";
     resultBox.style.fontWeight = "500";
   }
+
+  fromInput.addEventListener('keypress', (e) => {
+    if (e.key === "Enter") doConvert
+  });
 
   function doConvert() {
     const categoryKey = categorySelect.value; // length | weight | temperature
